@@ -3,28 +3,30 @@
 
 <head>
   <meta charset="UTF-8">
+  <title>Project Two ITMD-361 Fall 2018|index</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Cabin+Sketch|Architects+Daughter" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project One ITMD-361 Fall 2018|index</title>
+
 </head>
 
 <body>
-  <div class="navbar">
-    <div class="container">
-      <div class="title">
-        <h5>All About Me...</h5>
-      </div>
-      <div class="navbar_links">
-        <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="media.html">Media</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <header>
+    <div class="title">All About Me...</div>
+    <nav class="active">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="resume.html">RESUME</a></li>
+        <li><a href="media.html">MEDIA</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  </header>
+
   <main>
     <div class="content">
       <div class="text">
@@ -42,18 +44,18 @@
         <p>Deep v try-hard blue bottle whatever. Venmo bespoke craft beer cray biodiesel, typewriter schlitz drinking vinegar direct trade marfa. Asymmetrical schlitz artisan subway tile man braid. Pour-over vinyl skateboard small batch meggings fanny pack hella letterpress put a bird on it. Ramps shoreditch bitters poke 3 wolf moon. Glossier prism disrupt, small batch DIY next level air plant scenester.</p>
         <p>Health goth taiyaki four dollar toast deep v snackwave, pork belly franzen succulents mumblecore echo park sustainable mustache umami edison bulb. Kale chips chicharrones semiotics synth meditation, irony selfies gastropub tousled subway tile pork belly organic waistcoat fingerstache taxidermy. Meggings meditation pug, health goth lo-fi twee cray. Kale chips single-origin coffee vexillologist readymade vinyl knausgaard, everyday carry man braid selvage bespoke glossier scenester. Brunch migas bicycle rights, austin knausgaard leggings gluten-free freegan. Williamsburg narwhal vape, cold-pressed marfa you probably haven't heard of them pabst selvage truffaut yuccie vegan succulents.</p>
         <hr>
-        <h2 class="textheading">Samples from two of my most played albums!</h2>
-        <div class="row">
-          <div class="column">
-            <figure>
+        <div class="audio">
+          <h2 class="textheading">Samples from two of my most played albums!</h2>
+          <div class="audio-one">
+            <figure >
               <img src="images/john.jpg" alt="blue train" class="center">
+              <audio src="audio/blue_train.mp3" controls class="center"></audio>
             </figure>
-            <audio src="audio/blue_train.mp3" controls></audio>
           </div>
-          <div class="column">
+          <div class="audio-two">
             <figure>
               <img src="images/miles.jpg" alt="kind of blue" class="center">
-              <audio src="audio/so_what(Audio).mp3" controls></audio>
+              <audio src="audio/so_what(Audio).mp3" controls class ="center"></audio>
             </figure>
           </div>
         </div>
@@ -70,6 +72,17 @@
     </div>
     <p>Richard Long&copy;2018</p>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.menu-toggle').click(function() {
+        $('nav').toggleClass('active')
+
+      })
+
+    })
+  </script>
+
 </body>
 
 </html>

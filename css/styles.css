@@ -14,59 +14,66 @@ body {
 
 /*navbar*/
 
-.navbar {
-  width: 100%;
-  overflow: hidden;
-  height: 40px;
-  line-height: 40px;
-  border-bottom: 1px solid #ff533d;
-  background-color: #984b43;
+header {
   position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  background: #984b43;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ff533d;
 }
 
-.container {
-  color: #f5f5f5;
-  width: 78%;
-  margin-left: auto;
-  margin-right: auto;
+header .title {
+  color: #eac67a;
+  height: 50px;
+  line-height: 50px;
+  font-size: 2.0em;
+  float: left;
+  font-family: 'Architects Daughter', cursive;
 }
 
-
-.menu {
+header nav {
   float: right;
 }
 
-.menu li {
-  float: left;
-  width: 150px;
-  text-align: center;
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
   list-style: none;
-}
-
-.menu li a {
-  color: #f5f5f5;
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 1.25em;
+}
+
+header nav ul li a {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  color: #fff;
   text-decoration: none;
-  transition: all 0.3s ease;
+  display: block;
 }
 
-.menu li a:hover {
+header nav ul li a:hover {
   color: #233237;
+  background: #eac67a;
+  transition: 0.5s;
 }
 
-.title {
-  text-align: center;
-  width: 250px;
-  float: left;
+.menu-toggle {
+  color: #fff;
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
 }
 
-h5 {
-  font-family: 'Architects Daughter', cursive;
-  font-size: 1.85em;
-  font-weight: lighter;
-  color: #Eac67a;
-}
+
 
 /*end of navbar*/
 
@@ -75,6 +82,7 @@ h5 {
 .logo {
   background-color: #eac67a;
   border: solid 4px #ab987a;
+
 }
 
 img.one {
@@ -89,8 +97,11 @@ img.one {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 35%;
-  padding-bottom: 10px;
+  width: 25%;
+  padding: 5px;
+}
+
+.audio-two {
   padding-top: 10px;
 }
 
@@ -137,21 +148,13 @@ h3.textheading {
   font-size: 1.5em;
 }
 
-.row {
-  display: flex;
-}
 
-.column {
-  flex: 50%;
-  padding: 10px;
-  text-align: center;
-}
 
 /*end of main*/
 
 /*resume*/
 
-.resume {
+.resume-outer {
   background-color: #ab987a;
 
   width: 70%;
@@ -162,7 +165,7 @@ h3.textheading {
   border-right: 1px solid #f5f5f5;
 }
 
-.resumebody {
+.resume-inner {
   background-color: #f5f5f5;
   color: #233237;
   width: 70%;
@@ -178,19 +181,18 @@ h3.textheading {
   margin-bottom: 5px;
 }
 
-.header {
+.heading {
   text-align: center;
   margin-bottom: 5px;
 }
 
-.header li {
+.heading li {
   text-decoration: none;
   overflow: scroll;
-
   text-align: right;
 }
 
-.header h2 {
+.heading h2 {
   float: left;
 }
 
@@ -234,11 +236,11 @@ h4 {
   margin-left: 4%;
 }
 
-/*end of resume and main*/
+/*end of resume*/
 
 /*media*/
 
-.media {
+.media-outer {
   background-color: #ab987a;
   width: 70%;
   margin: auto;
@@ -246,7 +248,7 @@ h4 {
   border-right: 1px solid #f5f5f5;
 }
 
-.mediacontent {
+.media-inner {
   background-color: #f5f5f5;
   color: #233237;
   width: 80%;
@@ -264,6 +266,7 @@ h4 {
 }
 
 video {
+  width: 100%;
   margin: 20px;
 }
 
@@ -299,3 +302,77 @@ footer {
 }
 
 /*end footer*/
+
+@media (max-width:900px) {
+  /*nav all pages*/
+  header {
+    padding: 0 20px;
+  }
+  .menu-toggle {
+    display: block;
+    padding-right: 10px;
+  }
+  header nav {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh-50px);
+    background: #333;
+    top: 50px;
+    left: -100%;
+    transition: 0.5s
+  }
+  header nav.active {
+    left: 0;
+  }
+  header nav ul {
+    display: block;
+    text-align: center;
+  }
+  header nav ul li a {
+    border-bottom: 1px solid #ff533d;
+  }
+  .logo {
+    visibility: hidden;
+  }
+
+  /*home page*/
+  img.one {
+    width: 100%;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  /*resume page*/
+  .resume-outer {
+    width: 100%;
+  }
+  .resume-inner {
+    width: 100%;
+    padding: 10px;
+    font-size: .80em;
+  }
+
+  table {
+    width: 100%;
+    table-layout: auto;
+    margin: 0% 2% 0% 2%;
+  }
+
+  /*media page*/
+  .media-outer {
+    width: 100%;
+  }
+  .media-inner {
+    width: 90%;
+  }
+  video {
+    width: 300px;
+  }
+
+
+}
