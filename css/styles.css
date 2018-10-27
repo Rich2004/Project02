@@ -100,7 +100,13 @@ img.one {
   width: 25%;
   padding: 5px;
 }
-
+.center-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  padding: 5px;
+}
 .audio-two {
   padding-top: 10px;
 }
@@ -347,6 +353,7 @@ footer {
     padding-bottom: 10px;
     padding-top: 10px;
   }
+  
   /*resume page*/
   .resume-outer {
     width: 100%;
