@@ -347,7 +347,7 @@ footer {
     border-bottom: 1px solid #ff533d;
   }
   .logo {
-    visibility: hidden;
+    visibility:none;
   }
 
   /*home page*/
