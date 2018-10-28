@@ -386,9 +386,14 @@ footer {
   .media-inner {
     width: 90%;
   }
-  video {
-    width: 300px;
-  }
+  .center-02 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  padding: 5px;
+}
+  
 
 
 }
