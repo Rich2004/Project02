@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   background: url(../images/records.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -32,6 +33,7 @@ header .title {
   font-size: 2.0em;
   float: left;
   font-family: 'Architects Daughter', cursive;
+
 }
 
 header nav {
@@ -73,8 +75,6 @@ header nav ul li a:hover {
   display: none;
 }
 
-
-
 /*end of navbar*/
 
 /*main index*/
@@ -100,13 +100,15 @@ img.one {
   width: 25%;
   padding: 5px;
 }
+
 .center-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 50%;
   padding: 5px;
 }
+
 .audio-two {
   padding-top: 10px;
 }
@@ -272,8 +274,15 @@ h4 {
 }
 
 video {
-  width: 100%;
+  
   margin: 20px;
+}
+.center-02 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 5px;
 }
 
 /*end of media*/
@@ -353,7 +362,7 @@ footer {
     padding-bottom: 10px;
     padding-top: 10px;
   }
-  
+
   /*resume page*/
   .resume-outer {
     width: 100%;
