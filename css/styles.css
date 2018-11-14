@@ -1,9 +1,96 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
 body {
   background: url(../images/records.jpg) no-repeat center center fixed;
@@ -33,7 +120,6 @@ header .title {
   font-size: 2.0em;
   float: left;
   font-family: 'Architects Daughter', cursive;
-
 }
 
 header nav {
@@ -77,19 +163,18 @@ header nav ul li a:hover {
 
 /*end of navbar*/
 
-/*main index*/
+/*index*/
 
 .logo {
   background-color: #eac67a;
   border: solid 4px #ab987a;
-
 }
 
 img.one {
-  width: 35%;
+  width: 30%;
   height: auto;
   float: right;
-  margin: 10px;
+  margin: 20px;
   box-shadow: 2px 2px 3px #888888;
 }
 
@@ -106,24 +191,24 @@ img.one {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  padding: 5px;
+  padding: 10px;
 }
 
 .audio-two {
   padding-top: 10px;
 }
 
-.content {
+.main {
   background-color: #ab987a;
-  width: 70%;
+  width: 75%;
   margin: auto;
   border-left: 1px solid #f5f5f5;
   border-right: 1px solid #f5f5f5;
 }
 
-.text {
+.text-outer {
   background-color: #f5f5f5;
-  width: 95%;
+  width: 90%;
   margin: auto;
   font-family: sans-serif;
   padding: 70px 25px;
@@ -132,7 +217,12 @@ img.one {
   border-right: 2px solid #eac67a;
 }
 
-.text p {
+.text-inner {
+  border-bottom: 1px solid #233237;
+  padding-bottom: 10px;
+}
+
+.text-inner p {
   text-indent: 25px;
   line-height: 1.35em;
 }
@@ -156,18 +246,24 @@ h3.textheading {
   font-size: 1.5em;
 }
 
-
-
-/*end of main*/
+/*end of index*/
 
 /*resume*/
 
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 30px;
+  text-align: left;
+  margin-left: 4%;
+}
+
 .resume-outer {
   background-color: #ab987a;
-  width: 70%;
+  width: 75%;
+  padding: 50px 0px 35px 0px;
   margin-right: auto;
   margin-left: auto;
-  padding: 60px 40px;
   border-left: 1px solid #f5f5f5;
   border-right: 1px solid #f5f5f5;
 }
@@ -183,14 +279,18 @@ h3.textheading {
   line-height: 1.35em;
 }
 
-.resume h3 {
+.resume-inner h3 {
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .heading {
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #233237;
 }
 
 .heading li {
@@ -201,35 +301,16 @@ h3.textheading {
 
 .heading h2 {
   float: left;
+  font-size: 1.5em;
 }
 
 .education li {
-  margin-left: 7%;
+  margin-left: 4%;
   margin-bottom: 5px;
 }
 
 .skills {
   margin-bottom: 5px;
-}
-
-table {
-  border-collapse: collapse;
-  margin: 0% 10% 0% 15%;
-  padding: 0;
-  table-layout: fixed;
-  width: 80%;
-  height: auto;
-}
-
-td {
-  font-size: 1.0em;
-  line-height: 1.2em;
-  padding: 5px 5px 3px 5px;
-  text-align: left;
-}
-
-tr {
-  margin-bottom: .625em;
 }
 
 .employment li {
@@ -249,7 +330,7 @@ h4 {
 
 .media-outer {
   background-color: #ab987a;
-  width: 70%;
+  width: 75%;
   margin: auto;
   border-left: 1px solid #f5f5f5;
   border-right: 1px solid #f5f5f5;
@@ -267,15 +348,21 @@ h4 {
   border-right: 2px solid #eac67a;
 }
 
-.media p {
+.video {
+  margin-bottom: 5px;
+  border-bottom: 1px solid #233237;
+}
+
+.media-outer p {
   text-indent: 25px;
   line-height: 1.35em;
 }
 
 video {
-  
-  margin: 20px;
+  width: 50%;
+  margin: auto;
 }
+
 .center-02 {
   display: block;
   margin-left: auto;
@@ -283,6 +370,8 @@ video {
   width: 50%;
   padding: 5px;
 }
+
+controls.center-02 {}
 
 /*end of media*/
 
@@ -315,9 +404,10 @@ footer {
   color: #233237;
 }
 
+
 /*end footer*/
 
-@media (max-width:900px) {
+@media screen and (max-width: 600px) {
   /*nav all pages*/
   header {
     padding: 0 20px;
@@ -346,12 +436,14 @@ footer {
     border-bottom: 1px solid #ff533d;
   }
   .logo {
-    display:none;
+    display: none;
   }
+
+
 
   /*home page*/
   img.one {
-    width: 100%;
+    width: 95%;
   }
   .center {
     display: block;
@@ -363,36 +455,36 @@ footer {
   }
 
   /*resume page*/
-  .resume-outer {
-    width: 100%;
-  }
   .resume-inner {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     font-size: .80em;
   }
 
-  table {
-    width: 100%;
+  .wrapper {
+    width: 90%;
     table-layout: auto;
     margin: 0% 2% 0% 2%;
   }
 
   /*media page*/
-  .media-outer {
-    width: 100%;
-  }
   .media-inner {
     width: 90%;
   }
   .center-02 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-  padding: 5px;
-}
-  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    padding: 5px;
+  }
+  .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+
 
 
 }
