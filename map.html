@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Project Two ITMD-361 Fall 2018|index</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/map.js"></script>
+    <script async defersrc="https://maps.googleapis.com/maps/api/js?key=AIzaSyAykk4lLe0rxdk5PxeO0WC39IGFaih4-gU&callback=initMap"> 
+    </script>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Cabin+Sketch|Architects+Daughter" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcxt0BO86G2EkvueTChhDjEUI9tkyfgmE&callback=initMap">
+    </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <header>
+    <div class="title">All About Me...</div>
+    <nav class="active">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="resume.html">RESUME</a></li>
+        <li><a href="media.html">MEDIA</a></li>
+        <li><a href="#">MAP</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  </header>
+  <div id="main">
+    <div id="main-inside">
+    <h1>Places That I Have Been To This Year..</h1>
+   
+     <div class="wrap" id="map"></div>
+       <h2>Just in The United States...</h2>
+  </div>
+  </div>
+  <footer>
+    <div class="icon-bar">
+      <a href="#"><i class="fa fa-facebook-square"></i></a>
+      <a href="#"><i class="fa fa-github-square"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-linkedin-square"></i></a>
+      <a href="#"><i class="fa fa-envelope-square"></i></a>
+    </div>
+    <p>Richard Long&copy;2018</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.menu-toggle').click(function() {
+        $('nav').toggleClass('active')
+
+      })
+
+    })
+  </script>
+
+</body>
+
+</html>
